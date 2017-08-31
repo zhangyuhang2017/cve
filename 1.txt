@@ -4,8 +4,8 @@
 	In the default installation configuration, you need 'UC_MODERATOR' privileges can be implemented into the attack, when the database access permissions for root, you can use this vulnerability to write to the server backdoor file.
 
 	Source:
-		takeconfirm.php:9
-			sql_query("UPDATE users SET status = 'confirmed', editsecret = '' WHERE id IN (" . implode(", ", $_POST[conusr]) . ") AND status='pending'");
+		nowarn.php:27
+			$r = sql_query("SELECT modcomment FROM users WHERE id IN (" . implode(", ", $_POST[usernw]) . ")")or sqlerr(__FILE__, __LINE__);
 	Affected software: NexusPHP 1.5
 	Software Link: http://sourceforge.net/projects/nexusphp/
 
